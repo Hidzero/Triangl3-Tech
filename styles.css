@@ -517,3 +517,98 @@ body {
   /* ou o valor que preferir */
   height: auto;
 }
+
+/* ===== ESTILO PARA CONTACT SECTION ===== */
+.contact-section {
+  padding: 4rem 1rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-item .icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.btn-contact {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Ajustes para telas maiores (tablet pra cima) */
+@media (min-width: 600px) {
+  .contact-details {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-item {
+    max-width: 240px;
+  }
+
+  .btn-contact {
+    width: auto;
+  }
+}
+
+/* ===== Ajustes só para tablet e celular ===== */
+@media (max-width: 768px) {
+  /* Reduz um pouco o padding geral do card */
+  .contact-section {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    border-radius: 0px !important;
+  }
+
+  /* Container vira coluna e centraliza */
+  .contact-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Deixa cada <p> parecendo um “card” */
+  .contact-section p {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Aumenta um pouco o font-size e garante que o link ocupe toda a área */
+  .contact-section p a {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  /* Botão fica full-width (até um max-width) */
+  .btn-contact {
+    width: 100%;
+    max-width: 360px;
+    padding: 1rem;
+  }
+}

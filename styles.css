@@ -21,13 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 2rem 0;
-}
-
 /* ========= SMOOTH SCROLL ========= */
 html {
   scroll-behavior: smooth;
@@ -42,6 +35,26 @@ header {
   background: var(--bg-dark);
   z-index: 1000;
   transition: top 0.3s ease;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ========= FOOTER ========= */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #222;
+  color: var(--gray);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
 }
 
 .header-content {
@@ -137,7 +150,6 @@ header {
   margin-top: 2rem;
 }
 
-/* Decorativo: quadrado sutil */
 .products-section::before {
   content: "";
   position: absolute;
@@ -177,7 +189,6 @@ header {
 .about-section {
   background: #1a1a2e;
   padding: 4rem 0;
-  /* border-radius: 12px; */
   position: relative;
   overflow: hidden;
 }
@@ -205,7 +216,6 @@ header {
 .about-section {
   background: #1a1a2e;
   padding: 4rem 0;
-  /* border-radius: 12px; */
   overflow: hidden;
   margin: 4rem 0;
 }
@@ -224,14 +234,12 @@ header {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Alinha todo o texto da seção à esquerda e justifica */
 .about-text {
   text-align: left;
 }
 
 .about-text h2 {
   text-align: center;
-  /* mantém o título centralizado */
 }
 
 .about-list {
@@ -244,19 +252,14 @@ header {
   margin-bottom: 1rem;
   line-height: 1.6;
   text-indent: -0.75rem;
-  /* puxa a primeira linha para alinhar com o texto seguinte */
   padding-left: 0.75rem;
-  /* espaço igual ao recuo negativo acima */
   text-align: justify;
-  /* justifica as linhas */
 }
 
 .about-list li strong {
   color: var(--accent);
 }
 
-
-/* Responsivo: lado a lado em desktop */
 @media (min-width: 800px) {
   .about-content {
     flex-direction: row;
@@ -273,7 +276,6 @@ header {
   }
 }
 
-
 /* ========= CONTATO ========= */
 .contact-section {
   padding: 4rem 0;
@@ -288,16 +290,7 @@ header {
   color: var(--purple-light);
 }
 
-/* ========= FOOTER ========= */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 1px solid #222;
-  color: var(--gray);
-}
-
 /* ========= RESPONSIVIDADE ========= */
-/* Mobile first */
 .products-section .grid {
   grid-template-columns: 1fr;
 }
@@ -314,16 +307,12 @@ footer {
   }
 }
 
-
 /* ========= FALE CONOSCO DESTACADO ========= */
 .contact-section {
   background: linear-gradient(135deg, var(--purple-light), var(--purple-dark));
   max-width: 800px;
-  /* largura máxima do card */
   margin: 4rem auto;
-  /* centraliza e dá espaçamento vertical */
   padding: 3rem 2rem;
-  /* reduz o “tamanho” do quadrado */
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -366,13 +355,6 @@ footer {
   transform: translateY(-3px);
 }
 
-/* 1) Bloqueia overflow horizontal causado por elementos fixos */
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* 3) Ajuste fino para mobile (se já não tiver) */
 @media (max-width: 600px) {
   .whatsapp-float {
     width: 50px;
@@ -390,10 +372,6 @@ body {
 /* ------------------------------ */
 /* Ajuste definitivo do WhatsApp */
 /* ------------------------------ */
-
-/* ------------------------------ */
-/* Ajuste definitivo do WhatsApp */
-/* ------------------------------ */
 .whatsapp-float {
   position: fixed !important;
   bottom: 2rem !important;
@@ -403,7 +381,6 @@ body {
   width: 60px;
   height: 60px;
 
-  /* restaura círculo verde */
   background-color: #25D366 !important;
   border-radius: 50% !important;
 
@@ -440,8 +417,6 @@ body {
   }
 }
 
-
-/* botão do menu */
 .menu-toggle {
   display: none;
   background: none;
@@ -450,12 +425,10 @@ body {
   color: var(--text-light);
   cursor: pointer;
   z-index: 1001;
-  /* acima do nav */
 }
 
 @media (max-width: 768px) {
 
-  /* 1) botão hamburger posicionado à direita */
   .header-content {
     position: relative;
   }
@@ -468,23 +441,16 @@ body {
     display: block;
   }
 
-  /* 2) nav-list vira um painel lateral escondido à direita */
-  nav {
-    /* removemos position: relative; */
-  }
-
   .nav-list {
     flex-direction: column;
     position: fixed;
     top: 0;
     right: 0;
     width: 75%;
-    /* ou um valor fixo como 250px */
     max-width: 300px;
     height: 100vh;
     background: var(--bg-dark);
     padding-top: 4rem;
-    /* deixa espaço para o header */
     transform: translateX(100%);
     transition: transform .3s ease-in-out;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
@@ -497,16 +463,13 @@ body {
     padding-left: 1.5rem;
   }
 
-  /* 3) ao ativar, o painel desliza para dentro */
   .nav-list.active {
     transform: translateX(0);
   }
 }
 
-
 .logo {
   width: 140px;
-  /* ou o valor que preferir */
   height: auto;
 }
 
@@ -545,7 +508,6 @@ body {
   text-align: center;
 }
 
-/* Ajustes para telas maiores (tablet pra cima) */
 @media (min-width: 600px) {
   .contact-details {
     flex-direction: row;
@@ -564,14 +526,12 @@ body {
 /* ===== Ajustes só para tablet e celular ===== */
 @media (max-width: 768px) {
 
-  /* Reduz um pouco o padding geral do card */
   .contact-section {
     padding: 2rem 1rem;
     margin: 2rem 0;
     border-radius: 0px !important;
   }
 
-  /* Container vira coluna e centraliza */
   .contact-section .container {
     display: flex;
     flex-direction: column;
@@ -579,7 +539,6 @@ body {
     gap: 1rem;
   }
 
-  /* Deixa cada <p> parecendo um “card” */
   .contact-section p {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -590,7 +549,6 @@ body {
     margin: 0;
   }
 
-  /* Aumenta um pouco o font-size e garante que o link ocupe toda a área */
   .contact-section p a {
     display: block;
     font-size: 1rem;
@@ -598,7 +556,6 @@ body {
     color: #fff;
   }
 
-  /* Botão fica full-width (até um max-width) */
   .btn-contact {
     width: 100%;
     max-width: 360px;
@@ -606,7 +563,6 @@ body {
   }
 }
 
-/* Destaque animado para “REALIDADE” */
 .home-section h1 .highlight {
   display: inline-block;
   background: linear-gradient(90deg, var(--accent), var(--purple-light));
@@ -614,9 +570,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   font-size: 1.2em;
-  /* um pouquinho maior */
   letter-spacing: 2px;
-  /* espaçamento para dar ar de “sólido” */
   animation: popIn 0.6s ease-out;
 }
 

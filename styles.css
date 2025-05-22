@@ -372,22 +372,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 2) Força o botão dentro da viewport e sem extrapolar */
-.whatsapp-float {
-  /* use valores fixos simples, sem env() */
-  right: 1rem !important;
-  bottom: 1rem !important;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-float img {
-  width: 35px;
-  height: 35px;
-}
-
 /* 3) Ajuste fino para mobile (se já não tiver) */
 @media (max-width: 600px) {
   .whatsapp-float {
@@ -412,11 +396,10 @@ body {
 /* ------------------------------ */
 .whatsapp-float {
   position: fixed !important;
-  bottom: 1rem !important;
-  right: 1rem !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
   top: auto !important;
   left: auto !important;
-
   width: 60px;
   height: 60px;
 
@@ -434,12 +417,21 @@ body {
   transition: transform .3s;
 }
 
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
 @media (max-width: 400px) {
   .whatsapp-float {
     width: 45px !important;
     height: 45px !important;
-    bottom: 0.5rem !important;
-    right: 0.5rem !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
   }
 
   .whatsapp-float img {

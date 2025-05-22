@@ -35,10 +35,13 @@ html {
 
 /* ========= HEADER / NAV ========= */
 header {
-  background: var(--bg-dark);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-dark);
   z-index: 1000;
+  transition: top 0.3s ease;
 }
 
 .header-content {
@@ -458,41 +461,46 @@ body {
   /* acima do nav */
 }
 
-/* mobile/tablet */
 @media (max-width: 768px) {
-
-  /* mostra o botão */
+  /* 1) botão hamburger posicionado à direita */
+  .header-content {
+    position: relative;
+  }
   .menu-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
     display: block;
   }
 
-  /* posiciona nav para o dropdown */
+  /* 2) nav-list vira um painel lateral escondido à direita */
   nav {
-    position: relative;
+    /* removemos position: relative; */
   }
-
-  /* esconde lista por padrão */
   .nav-list {
-    display: none;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;            /* ou um valor fixo como 250px */
+    max-width: 300px;
+    height: 100vh;
     background: var(--bg-dark);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    border-top: 1px solid #222;
+    padding-top: 4rem;     /* deixa espaço para o header */
+    transform: translateX(100%);
+    transition: transform .3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.5);
+    z-index: 1000;
   }
-
-  /* espaçamento maior entre itens */
   .nav-list li {
-    margin: 0.5rem 0;
-    text-align: center;
+    margin: 1rem 0;
+    text-align: left;
+    padding-left: 1.5rem;
   }
 
-  /* quando ativado, mostra o menu */
+  /* 3) ao ativar, o painel desliza para dentro */
   .nav-list.active {
-    display: flex;
+    transform: translateX(0);
   }
 }

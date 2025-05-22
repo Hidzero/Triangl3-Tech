@@ -643,3 +643,8 @@ body {
     transform: scale(1);
   }
 }
+
+.contact-section p a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}

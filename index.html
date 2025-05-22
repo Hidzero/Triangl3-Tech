@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangl3 • Soluções em Software</title>
+    <meta name="description" content="Triangl3: sistemas web, sites institucionais e apps mobile sob medida." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="container header-content">
+            <img src="logo.png" alt="Triangl3 logo" class="logo" />
+
+            <!-- botão hamburger -->
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="home-section">
+        <div class="container">
+            <h1>Transformando ideias em realidade</h1>
+            <p>Desenvolvemos sistemas web, sites institucionais e apps mobile personalizados com Laravel, React e
+                FlutterFlow.</p>
+            <a href="#contato" class="btn">Solicite um Orçamento</a>
+        </div>
+    </section>
+
+    <!-- PRODUTOS / SERVIÇOS -->
+    <section id="produtos" class="products-section">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Sites Institucionais</h3>
+                    <p>WordPress, React ou Next.js para empresas que querem presença sólida na web.</p>
+                </div>
+                <div class="card">
+                    <h3>Sistemas Web</h3>
+                    <p>Laravel + MySQL: soluções sob medida para gestão, e-commerce, CRM e muito mais.</p>
+                </div>
+                <div class="card">
+                    <h3>Apps Mobile</h3>
+                    <p>Prototipagem rápida com FlutterFlow e exportação para Android/iOS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section id="sobre" class="about-section">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="sobre-nos.jpg" alt="Equipe Triangl3" />
+            </div>
+            <div class="about-text">
+                <h2>Sobre a Triangl3</h2>
+                <p>Na Triangl3, somos uma equipe enxuta — você e sua esposa — dedicada a transformar desafios de
+                    tecnologia em soluções elegantes e eficientes.</p>
+                <ul class="about-list">
+                    <li>
+                        <strong>Missão:</strong>
+                        Entregar software de alta qualidade que impulsione o crescimento dos nossos clientes, com
+                        transparência e agilidade.
+                    </li>
+                    <li>
+                        <strong>Visão:</strong>
+                        Ser referência em inovação para pequenas e médias empresas, combinando expertise técnica e
+                        atendimento próximo.
+                    </li>
+                    <li>
+                        <strong>Valores:</strong>
+                        Qualidade, Empatia, Compromisso e Criatividade.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <h2>Fale Conosco</h2>
+            <p>Email: <a href="mailto:contato@triangl3.com.br">contato@triangl3.com.br</a></p>
+            <p>WhatsApp: <a href="tel:+5521967214778">(21) 96721-4778</a></p>
+            <a href="mailto:contato@triangl3.com.br" class="btn-contact">Enviar Mensagem</a>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Triangl3. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5521967214778?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Triangl3"
+        class="whatsapp-float" target="_blank" rel="noopener">
+        <img src="whatsapp-icon.png" alt="WhatsApp" />
+    </a>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+:root {
+  --bg-dark: #0f0f1a;
+  --text-light: #fff;
+  --accent: #00c8b3;
+  --gray: #666;
+  --purple-light: #9d4edd;
+  --purple-dark: #6a0dad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* ========= SMOOTH SCROLL ========= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========= HEADER / NAV ========= */
+header {
+  background: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 120px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .2s;
+}
+
+.nav-list a:hover {
+  color: var(--purple-light);
+}
+
+/* ========= HOME SECTION COM QUADRADOS ========= */
+.home-section {
+  position: relative;
+  text-align: center;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.home-section::before,
+.home-section::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: var(--purple-dark);
+  opacity: 0.15;
+  transform: rotate(45deg);
+}
+
+.home-section::before {
+  top: -50px;
+  left: -50px;
+}
+
+.home-section::after {
+  bottom: -50px;
+  right: -50px;
+}
+
+.home-section h1 {
+  font-size: 2.8rem;
+  color: var(--accent);
+}
+
+.home-section p {
+  margin: 1rem 0 2rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background .3s, transform .2s;
+}
+
+.btn:hover {
+  background: var(--purple-light);
+  transform: translateY(-3px);
+}
+
+/* ========= PRODUTOS / SERVIÇOS ========= */
+.products-section {
+  position: relative;
+}
+
+.products-section .grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Decorativo: quadrado sutil */
+.products-section::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: var(--purple-light);
+  opacity: 0.1;
+  top: 20%;
+  right: -100px;
+  transform: rotate(20deg);
+}
+
+.products-section .card {
+  position: relative;
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.products-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+}
+
+.products-section h2,
+.about-section h2,
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+/* ========= SOBRE NÓS ========= */
+.about-section {
+  background: #1a1a2e;
+  padding: 4rem 0;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--purple-dark);
+  opacity: 0.1;
+  bottom: -40px;
+  left: -40px;
+  transform: rotate(30deg);
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #ccc;
+}
+
+/* ===== SOBRE NÓS / 2 COLUNAS ===== */
+.about-section {
+  background: #1a1a2e;
+  padding: 4rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 4rem 0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Alinha todo o texto da seção à esquerda e justifica */
+.about-text {
+  text-align: left;
+}
+
+.about-text h2 {
+  text-align: center;
+  /* mantém o título centralizado */
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.about-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-indent: -0.75rem;
+  /* puxa a primeira linha para alinhar com o texto seguinte */
+  padding-left: 0.75rem;
+  /* espaço igual ao recuo negativo acima */
+  text-align: justify;
+  /* justifica as linhas */
+}
+
+.about-list li strong {
+  color: var(--accent);
+}
+
+
+/* Responsivo: lado a lado em desktop */
+@media (min-width: 800px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about-image,
+  .about-text {
+    flex: 1;
+  }
+
+  .about-text {
+    padding-left: 2rem;
+  }
+}
+
+
+/* ========= CONTATO ========= */
+.contact-section {
+  padding: 4rem 0;
+}
+
+.contact-section p a {
+  color: var(--accent);
+  transition: color .2s;
+}
+
+.contact-section p a:hover {
+  color: var(--purple-light);
+}
+
+/* ========= FOOTER ========= */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #222;
+  color: var(--gray);
+}
+
+/* ========= RESPONSIVIDADE ========= */
+/* Mobile first */
+.products-section .grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .products-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .products-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ========= FALE CONOSCO DESTACADO ========= */
+.contact-section {
+  background: linear-gradient(135deg, var(--purple-light), var(--purple-dark));
+  max-width: 800px;
+  /* largura máxima do card */
+  margin: 4rem auto;
+  /* centraliza e dá espaçamento vertical */
+  padding: 3rem 2rem;
+  /* reduz o “tamanho” do quadrado */
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section h2 {
+  font-size: 2.8rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  margin: .5rem 0;
+}
+
+.contact-section p a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn-contact {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background .3s, transform .2s;
+}
+
+.btn-contact:hover {
+  background: var(--purple-light);
+  transform: translateY(-3px);
+}
+
+/* 1) Bloqueia overflow horizontal causado por elementos fixos */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* 2) Força o botão dentro da viewport e sem extrapolar */
+.whatsapp-float {
+  /* use valores fixos simples, sem env() */
+  right: 1rem !important;
+  bottom: 1rem !important;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* 3) Ajuste fino para mobile (se já não tiver) */
+@media (max-width: 600px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ------------------------------ */
+/* Ajuste definitivo do WhatsApp */
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* Ajuste definitivo do WhatsApp */
+/* ------------------------------ */
+.whatsapp-float {
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  top: auto !important;
+  left: auto !important;
+
+  width: 60px;
+  height: 60px;
+
+  /* restaura círculo verde */
+  background-color: #25D366 !important;
+  border-radius: 50% !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transition: transform .3s;
+}
+
+@media (max-width: 400px) {
+  .whatsapp-float {
+    width: 45px !important;
+    height: 45px !important;
+    bottom: 0.5rem !important;
+    right: 0.5rem !important;
+  }
+
+  .whatsapp-float img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
+
+
+/* botão do menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  z-index: 1001;
+  /* acima do nav */
+}
+
+/* mobile/tablet */
+@media (max-width: 768px) {
+
+  /* mostra o botão */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* posiciona nav para o dropdown */
+  nav {
+    position: relative;
+  }
+
+  /* esconde lista por padrão */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #222;
+  }
+
+  /* espaçamento maior entre itens */
+  .nav-list li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+
+  /* quando ativado, mostra o menu */
+  .nav-list.active {
+    display: flex;
+  }
+}

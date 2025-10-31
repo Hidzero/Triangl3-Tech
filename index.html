@@ -26,109 +26,320 @@
 <body>
 
     <!-- HEADER / NAV -->
-    <header>
+    <header style="top: -70px;">
         <div class="container header-content">
-            <img src="img\triangl3-logo.svg" alt="Triangl3 logo" class="logo" />
+            <a href="#home" class="brand">
+                <img src="img/triangl3-logo.svg" alt="Triangl3 logo" class="logo" />
+                <span class="brand-tagline">Soluções digitais sob medida</span>
+            </a>
 
             <!-- botão hamburger -->
-            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#processo">Processo</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-cta">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <main>
 
-    <!-- HOME -->
-    <section id="home" class="home-section">
-        <div class="container">
-            <h1>
-                Transformando a sua ideia em
-                <span class="highlight">REALIDADE</span>
-            </h1>
-            <p>Desenvolvemos sistemas web, sites institucionais e apps mobile personalizados.</p>
-            <a href="https://calendar.app.google/FgbRpRTmFxYBFmyX6" class="btn" target="_blank">Vamos Conversar</a>
-        </div>
-    </section>
-
-    <!-- PRODUTOS / SERVIÇOS -->
-    <section id="produtos" class="products-section">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Sites Institucionais</h3>
-                    <p>Desenvolvemos sites que comunicam a identidade da sua marca, com design responsivo e foco em
-                        conversão.</p>
+        <!-- HOME / HERO -->
+        <section id="home" class="home-section">
+            <div class="container home-content">
+                <div class="home-copy">
+                    <span class="badge">Triangl3 Tech</span>
+                    <h1>
+                        Construímos produtos digitais que elevam o nível da sua marca.
+                    </h1>
+                    <p>
+                        Estratégia, design e desenvolvimento trabalhando juntos para entregar experiências que geram
+                        confiança, conversão e crescimento real.
+                    </p>
+                    <div class="home-actions">
+                        <a href="https://calendar.app.google/FgbRpRTmFxYBFmyX6" class="btn btn-primary"
+                            target="_blank" rel="noopener">Agendar uma conversa</a>
+                        <a href="#projetos" class="btn btn-outline">Ver projetos</a>
+                    </div>
+                    <ul class="trust-metrics">
+                        <li><strong>+30</strong> projetos entregues</li>
+                        <li><strong>98%</strong> satisfação dos clientes</li>
+                        <li><strong>7 dias</strong> para lançar seu MVP</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <h3>Sistemas Web</h3>
-                    <p>Criamos sistemas sob medida para automatizar processos, integrar equipes e otimizar a gestão do
-                        seu negócio.</p>
-                </div>
-                <div class="card">
-                    <h3>Apps Mobile</h3>
-                    <p>Projetamos aplicativos intuitivos e funcionais, aproximando sua marca dos clientes onde quer que
-                        eles estejam.</p>
+                <div class="home-showcase">
+                    <div class="showcase-card">
+                        <span class="tag">Site institucional</span>
+                        <h3>Identidade forte</h3>
+                        <p>Ui/UX alinhado à proposta de valor para impressionar em poucos segundos.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <span class="tag">Plataforma web</span>
+                        <h3>Processos conectados</h3>
+                        <p>Automação, integrações e dashboards para operar com eficiência.</p>
+                    </div>
+                    <div class="showcase-card">
+                        <span class="tag">Aplicativo mobile</span>
+                        <h3>Experiência contínua</h3>
+                        <p>Apps performáticos com foco em retenção e recorrência.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- SOBRE NÓS -->
-    <section id="sobre" class="about-section">
-        <div class="container about-content">
-            <div class="about-image">
-                <img src="img/sobre-nos.png" alt="Equipe Triangl3" />
+        <!-- CLIENTES -->
+        <section class="clients-strip">
+            <div class="container">
+                <div class="clients-panel">
+                    <div class="clients-intro">
+                        <span class="badge">Parcerias</span>
+                        <h3>Cases construídos com clientes visionários</h3>
+                        <p>Transformamos objetivos ousados de diferentes mercados em soluções digitais escaláveis,
+                            seguras e com foco real em resultados.</p>
+                    </div>
+                    <div class="clients-grid">
+                        <article class="client-card">
+                            <span class="client-segment">Startups SaaS</span>
+                            <p>Plataformas multi-tenant com onboarding guiado, billing integrado e analytics para
+                                expansão.</p>
+                        </article>
+                        <article class="client-card">
+                            <span class="client-segment">Educação</span>
+                            <p>Portais EAD, trilhas gamificadas e apps mobile para aumentar engajamento e retenção.</p>
+                        </article>
+                        <article class="client-card">
+                            <span class="client-segment">Saúde</span>
+                            <p>Produtos com compliance LGPD, prontuário integrado e UX centrada no cuidado ao paciente.
+                            </p>
+                        </article>
+                        <article class="client-card">
+                            <span class="client-segment">Indústria</span>
+                            <p>Automação de processos, IoT dashboards e monitoramento em tempo real para operação.</p>
+                        </article>
+                        <article class="client-card">
+                            <span class="client-segment">Serviços Financeiros</span>
+                            <p>Onboarding digital, backoffice inteligente e fluxos antifraude prontos para escalar.</p>
+                        </article>
+                    </div>
+                </div>
             </div>
-            <div class="about-text">
-                <h2>Sobre a Triangl3</h2>
-                <p>Na Triangl3, temos uma equipe dedicada a transformar desafios de
-                    tecnologia em soluções elegantes e eficientes.</p>
-                <ul class="about-list">
-                    <li>
-                        <strong>Missão:</strong>
-                        Entregar software de alta qualidade que impulsione o crescimento dos nossos clientes, com
-                        transparência e agilidade.
-                    </li>
-                    <li>
-                        <strong>Visão:</strong>
-                        Ser referência em inovação para pequenas e médias empresas, combinando expertise técnica e
-                        atendimento próximo.
-                    </li>
-                    <li>
-                        <strong>Valores:</strong>
-                        Qualidade, Empatia, Compromisso e Criatividade.
-                    </li>
-                </ul>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="products-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="badge">O que entregamos</span>
+                    <h2>Nossos serviços conectam estratégia e execução</h2>
+                    <p>Combinamos pesquisa, design e engenharia para criar experiências digitais completas, prontas para
+                        ganhar o mercado.</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Sites de alta conversão</h3>
+                        <p>Landing pages e sites institucionais com copywriting estratégico, SEO e performance impecável
+                            para gerar autoridade.</p>
+                        <ul class="card-list">
+                            <li>Design responsivo customizado</li>
+                            <li>Copy e narrativa orientada a conversão</li>
+                            <li>Implementação otimizada para SEO</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Produtos e plataformas web</h3>
+                        <p>Desenvolvimento ágil de sistemas sob medida, construídos com as tecnologias ideais para o seu
+                            desafio.</p>
+                        <ul class="card-list">
+                            <li>Arquitetura escalável</li>
+                            <li>Integrações com APIs e ERPs</li>
+                            <li>Painéis e automações inteligentes</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Aplicativos mobile</h3>
+                        <p>Apps híbridos ou nativos focados em experiência, alinhados à jornada do usuário e aos seus
+                            indicadores de negócio.</p>
+                        <ul class="card-list">
+                            <li>Prototipagem rápida</li>
+                            <li>Publicação nas lojas</li>
+                            <li>Monitoramento e evolução contínua</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- PROJETOS -->
+        <section id="projetos" class="projects-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="badge">Resultados</span>
+                    <h2>Projetos que geraram impacto imediato</h2>
+                    <p>Alguns recortes que mostram como ajudamos empresas a ganhar presença, eficiência e escala.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-tag">Educação</div>
+                        <h3>Portal EAD com crescimento de 4x no funil</h3>
+                        <p>Redesenho completo da experiência, integrando LMS, área do aluno e métricas em tempo real.</p>
+                        <ul>
+                            <li>Tempo de navegação +62%</li>
+                            <li>Suporte com chatbot 24/7</li>
+                            <li>Checkout integrado ao CRM</li>
+                        </ul>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-tag">Tecnologia</div>
+                        <h3>Site SaaS focado em demonstrações qualificadas</h3>
+                        <p>Estratégia de conteúdo e design orientada a ICP, aumentando em 55% as solicitações de prova
+                            de conceito.</p>
+                        <ul>
+                            <li>Landing pages dinâmicas</li>
+                            <li>CMS headless</li>
+                            <li>Esteira automatizada de leads</li>
+                        </ul>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-tag">Indústria</div>
+                        <h3>Dashboard operacional com indicadores críticos</h3>
+                        <p>Aplicação web para monitoramento de produção e logística com alertas em tempo real.</p>
+                        <ul>
+                            <li>Integração com ERP legado</li>
+                            <li>KPIs configuráveis</li>
+                            <li>Suíte de relatórios exportáveis</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
+        <!-- PROCESSO -->
+        <section id="processo" class="process-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="badge">Como trabalhamos</span>
+                    <h2>Um processo pensado para reduzir riscos e acelerar entregas</h2>
+                </div>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Descoberta</h3>
+                        <p>Diagnóstico rápido para entender objetivos, oportunidades e restrições do projeto.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Estratégia & protótipo</h3>
+                        <p>Validamos a abordagem com protótipos navegáveis e plano técnico antes do desenvolvimento.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Construção ágil</h3>
+                        <p>Sprints curtos, feedback constante e transparência total sobre progresso e métricas.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Lançamento & evolução</h3>
+                        <p>Publicação assistida, monitoramento contínuo e roadmap de melhorias guiado por dados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="contact-section">
-        <div class="container">
-            <h2>Fale Conosco</h2>
-            <p>Email: <a href="mailto:triangl3.tech.contato@gmail.com">triangl3.tech.contato@gmail.com</a></p>
-            <p>WhatsApp: <a href="tel:+5521967214778">(21) 96721-4778</a></p>
-            <a href="mailto:triangl3.tech.contato@gmail.com" class="btn-contact">Enviar Mensagem</a>
-        </div>
-    </section>
+        <!-- SOBRE -->
+        <section id="sobre" class="about-section">
+            <div class="container about-content">
+                <div class="about-image">
+                    <img src="img/sobre-nos.png" alt="Equipe Triangl3" />
+                </div>
+                <div class="about-text">
+                    <span class="badge">Quem somos</span>
+                    <h2>Expertise multidisciplinar com foco no seu resultado</h2>
+                    <p>
+                        Somos uma equipe apaixonada por tecnologia, design e negócios. Atuamos como parceiros estratégicos,
+                        não apenas fornecedores, unindo visão de produto com execução de excelência.
+                    </p>
+                    <ul class="about-list">
+                        <li><strong>Missão:</strong> entregar software de alta qualidade que impulsione o crescimento dos
+                            nossos clientes com transparência e agilidade.</li>
+                        <li><strong>Visão:</strong> ser referência em inovação para pequenas e médias empresas que buscam
+                            performance digital.</li>
+                        <li><strong>Valores:</strong> compromisso, empatia, criatividade e melhoria contínua.</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <h3>Pilha tecnológica</h3>
+                        <ul>
+                            <li>React & Next.js</li>
+                            <li>Node.js & NestJS</li>
+                            <li>Laravel & PHP</li>
+                            <li>Flutter & React Native</li>
+                            <li>AWS, Azure & Supabase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- DEPOIMENTOS -->
+        <section id="depoimentos" class="testimonials-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="badge">Confiança</span>
+                    <h2>O que nossos clientes dizem</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <blockquote class="testimonial">
+                        <p>"A Triangl3 entendeu profundamente nossa dor e entregou uma plataforma que hoje é o coração do
+                            nosso negócio digital."</p>
+                        <cite>Fernanda Gomes · COO de edtech</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Processo organizado, comunicação transparente e um nível de qualidade que impressionou até o
+                            nosso time técnico."</p>
+                        <cite>Leonardo Matos · CTO de startup SaaS</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Em poucas semanas já tínhamos um MVP validado e pronto para captar investimento. Excelente
+                            parceiro."</p>
+                        <cite>Rafael Ortega · Founder de healthtech</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="contato" class="contact-section">
+            <div class="container">
+                <span class="badge">Pronto para acelerar?</span>
+                <h2> Vamos desenvolver o próximo case da sua empresa</h2>
+                <p>Conte com um parceiro que cuida da estratégia, do design e da tecnologia para levar seu produto mais
+                    longe.</p>
+                <div class="contact-actions">
+                    <a href="mailto:triangl3.tech.contato@gmail.com" class="btn btn-primary">Enviar email</a>
+                    <a href="tel:+5521967214778" class="btn btn-outline">Falar no WhatsApp</a>
+                </div>
+                <div class="contact-details">
+                    <p>Email: <a href="mailto:triangl3.tech.contato@gmail.com">triangl3.tech.contato@gmail.com</a></p>
+                    <p>WhatsApp: <a href="tel:+5521967214778">(21) 96721-4778</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <p>© 2025 Triangl3. Todos os direitos reservados.</p>
+        <div class="container footer-content">
+            <p>© 2025 Triangl3 Tech. Todos os direitos reservados.</p>
+            <a href="https://calendar.app.google/FgbRpRTmFxYBFmyX6" target="_blank" rel="noopener">Agende um diagnóstico
+                gratuito</a>
         </div>
     </footer>
 
@@ -140,39 +351,48 @@
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('.nav-list');
+        const nav = document.querySelector('nav');
         const navLinks = document.querySelectorAll('.nav-list a');
+        const body = document.body;
 
-        // abre / fecha pelo hambúrguer
-        menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-        });
+        const updateMenuState = (open) => {
+            const shouldOpen = typeof open === 'boolean' ? open : !nav.classList.contains('active');
+            nav.classList.toggle('active', shouldOpen);
+            menuToggle.classList.toggle('active', shouldOpen);
+            body.classList.toggle('menu-open', shouldOpen);
+            menuToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        };
 
-        // fecha o menu quando qualquer item for clicado
+        menuToggle.addEventListener('click', () => updateMenuState());
+
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navList.classList.remove('active');
-            });
+            link.addEventListener('click', () => updateMenuState(false));
         });
-    </script>
 
-
-    <script>
-        const header = document.querySelector('header');
-        let prevScrollY = window.pageYOffset;
-
-        window.addEventListener('scroll', () => {
-            const currentScrollY = window.pageYOffset;
-
-            if (currentScrollY < prevScrollY) {
-                // rolou para cima (puxou para baixo): mostrar header
-                header.style.top = '0';
-            } else {
-                // rolou para baixo: esconder header
-                header.style.top = '-70px'; // ou a altura exata do seu header
+        nav.addEventListener('click', (event) => {
+            if (!event.target.closest('.nav-list')) {
+                updateMenuState(false);
             }
+        });
 
-            prevScrollY = currentScrollY;
+        const mobileBreakpoint = window.matchMedia('(max-width: 900px)');
+        const handleBreakpointChange = (event) => {
+            if (!event.matches && nav.classList.contains('active')) {
+                updateMenuState(false);
+            }
+        };
+
+        handleBreakpointChange(mobileBreakpoint);
+        if (typeof mobileBreakpoint.addEventListener === 'function') {
+            mobileBreakpoint.addEventListener('change', handleBreakpointChange);
+        } else if (typeof mobileBreakpoint.addListener === 'function') {
+            mobileBreakpoint.addListener(handleBreakpointChange);
+        }
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                updateMenuState(false);
+            }
         });
     </script>
 
